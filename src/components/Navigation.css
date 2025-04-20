@@ -9,8 +9,7 @@ body {
 
 /* Navbar Container */
 .navbar {
-    background-color: rgba(229, 229, 203, 0.9);
-    /* Light box with transparency */
+    background-color: rgba(229, 229, 203, 0.9); /* Light box with transparency */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -43,7 +42,6 @@ body {
     0% {
         left: -100%;
     }
-
     100% {
         left: 100%;
     }
@@ -77,7 +75,6 @@ body {
         transform: scale(1);
         background-color: transparent;
     }
-
     100% {
         transform: scale(1.1);
         background-color: #D5CEA3;
@@ -90,12 +87,10 @@ body {
     0% {
         width: 0%;
     }
-
     100% {
         width: 100%;
     }
 }
-
 
 /* Navigation Items */
 .navbar-right {
@@ -137,6 +132,7 @@ body {
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem;
+        width: 100%;
     }
 
     .navbar-left {
@@ -160,6 +156,7 @@ body {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease-in-out;
         z-index: 1000;
+        overflow-y: auto;
     }
 
     .navbar.open .navbar-right {
