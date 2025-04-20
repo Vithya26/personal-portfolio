@@ -11,7 +11,6 @@ import Skills from './components/Skills'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <Navigation />

@@ -39,7 +39,7 @@ function Contact() {
                         </div>
                         <div className="contact-box">
                             <FaMapMarkerAlt className="contact-icon" />
-                            <p>Arasankulam, Omanthai, Vavuiya , Sri Lanka</p>
+                            <p>Arasankulam, Omanthai, Vavuniya , Sri Lanka</p>
                         </div>
                         <br />
                         <div className="social-media">

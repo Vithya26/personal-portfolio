@@ -33,7 +33,7 @@ function Footer() {
         <h4 className="footer-subtitle">Contact</h4>
         <p><FaPhone className="footer-icon" /> +94 774691179 </p>
         <p><FaEnvelope className="footer-icon" />karunavithya06@gmaiI.com </p>
-        <p><FaMapMarkerAlt className="footer-icon" /> Arasankulam, Omanthai, Vavuiya , Sri Lanka</p>
+        <p><FaMapMarkerAlt className="footer-icon" /> Arasankulam, Omanthai, Vavuniya , Sri Lanka</p>
       </div>
 
       <div className="footer-section footer-social">

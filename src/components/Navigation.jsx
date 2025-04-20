@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { FaUser, FaGraduationCap, FaBriefcase, FaTools, FaEnvelope } from "react-icons/fa";
 import "./Navigation.css";
-import { Link } from 'react-router-dom'; // at the top with other imports
-
+import { Link } from 'react-router-dom'; // Ensure this import is included
 
 const navItems = [
   { name: "About", icon: <FaUser />, id: "about" },
-  { name: "Education", icon: <FaGraduationCap/>, id: "education" },
+  { name: "Education", icon: <FaGraduationCap />, id: "education" },
   { name: "Experience", icon: <FaBriefcase />, id: "experience" },
   { name: "Skills", icon: <FaTools />, id: "skills" },
   { name: "Contact", icon: <FaEnvelope />, id: "contact" },
@@ -23,21 +22,27 @@ function Navigation() {
     }
   };
 
+  // Close menu after navigation item click
+  const handleNavItemClick = (index, id) => {
+    setActive(index); 
+    scrollToSection(id);
+    if (menuOpen) {
+      setMenuOpen(false); // Close the menu when an item is clicked
+    }
+  };
+
   return (
     <nav className={`navbar ${menuOpen ? "open" : ""}`}>
       {/* Left side - Name */}
       <div className="navbar-left">VITHYABARATHY</div>
 
       {/* Right side - Navigation Links */}
-      <ul className="navbar-right">
+      <ul className={`navbar-right ${menuOpen ? "open" : ""}`}>
         {navItems.map((item, index) => (
           <li
             key={index}
             className={active === index ? "active" : ""}
-            onClick={() => {
-              setActive(index);
-              scrollToSection(item.id);
-            }}
+            onClick={() => handleNavItemClick(index, item.id)}
           >
             {item.icon}
             <span>{item.name}</span>
